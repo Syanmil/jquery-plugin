@@ -22,9 +22,11 @@
         if(email.cekEmail()){
           tag.text("Valid")
           tag.css('color', 'green')
+          email.css('border', 'solid 2px green')
         } else {
           tag.text("Invalid")
           tag.css('color', 'red')
+          email.css('border', 'solid 2px green')
         }
       })
     </script>
