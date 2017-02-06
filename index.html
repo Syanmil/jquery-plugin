@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jquery Plugin</title>
+    <script
+			  src="https://code.jquery.com/jquery-3.1.1.min.js"
+			  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+			  crossorigin="anonymous">
+    </script>
+  </head>
+  <body>
+    <form>
+      <input id="formEmail" type="text" name="email" value="">
+      <p style="display: inline-block" id="tag1">Empty</p>
+    </form>
+    <script type="text/javascript" src="lib/validate-email.js"></script>
+    <script>
+      let email = $("#formEmail")
+      let tag = $("#tag1")
+      email.keyup(function(){
+        if(email.cekEmail()){
+          tag.text("Valid")
+          tag.css('color', 'green')
+        } else {
+          tag.text("Invalid")
+          tag.css('color', 'red')
+        }
+      })
+    </script>
+  </body>
+</html>
